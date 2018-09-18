@@ -8,3 +8,5 @@ css/
 .sass-cache/
 
 package-lock.json
+
+public/lib/

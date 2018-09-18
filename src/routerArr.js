@@ -1,5 +1,6 @@
 import Counter from './usecase/counter/';
 import Todo from './usecase/todo/';
+import Editor from './usecase/editor/';
 
 const currentUrl = '/';
 
@@ -7,9 +8,14 @@ const currentUrl = '/';
 const routerArr = [
   {
     path: currentUrl,
-    title: 'App: Todo',
-    component: Todo,
+    title: 'App: Editor',
+    component: Editor,
     exact: true
+  },
+  {
+    path: currentUrl + 'todo',
+    title: 'App: Todo',
+    component: Todo
   },
   {
     path: currentUrl + 'counter',

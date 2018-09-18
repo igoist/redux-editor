@@ -1,0 +1,144 @@
+h1 {
+  color: #f00;
+}
+
+.panel {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1440px;
+  min-width: 1240px;
+  min-height: 768px;
+  height: 100%;
+  background: #d1d1d1;
+
+  .left {
+    float: left;
+    width: 450px;
+    height: 100%;
+    background-color: #0f0;
+  }
+
+  .right {
+    float: right;
+    padding: 20px;
+    width: 780px;
+    height: 100%;
+    background-color: #f7f7f7;
+    overflow: scroll;
+  }
+}
+
+#e01 {
+  border: 1px solid #d333;
+  height: 100px;
+}
+
+.ex-editor {
+  outline: none;
+  width: 300px;
+  line-height: 32px;
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+.hb-card-0 {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: #fff;
+
+  &:first-child:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 40px;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.06);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+  h3 {
+    border-bottom: solid 1px #e3e3e3;
+    padding-left: 20px;
+    line-height: 58px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .content {
+    padding: 20px;
+
+    p {
+      margin-bottom: 0;
+      line-height: 32px;
+    }
+  }
+
+  .production {
+    padding: 20px;
+  }
+
+  .tools {
+    .icon-group {
+      margin-top: 20px;
+      width: 100%;
+      line-height: 12px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .ic-software-ps {
+        display: inline-block;
+        margin-right: 25px;
+        width: 54px;
+        height: 54px;
+        // background-image: url(../img/ic-software-ps.svg);
+        background-repeat: no-repeat;
+
+        &:nth-child(9) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.fancyimages {
+  font-size: 0;
+  margin: -5px;
+}
+
+.fancybox {
+  display: inline-block;
+  max-width: calc(50% - 10px);
+  margin: 5px;
+  overflow: hidden;
+}
+
+.fancybox.bigimg {
+  max-width: calc(100% - 10px);
+}
+
+.production {
+  line-height: 1.8;
+  color: #555;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+
+  img {
+    width: 100%;
+    outline: none;
+  }
+}

@@ -15,3 +15,6 @@ echo "link $(pwd)/$SRCPATH/map -> $(pwd)/dist/map"
 
 echo "link $(pwd)/$SRCPATH/css -> $(pwd)/dist/css"
 # ln -s "$(pwd)/$SRCPATH/css/" "$(pwd)/dist/css"
+
+echo "link $(pwd)/$SRCPATH/lib -> $(pwd)/dist/lib"
+ln -s "$(pwd)/$SRCPATH/lib/" "$(pwd)/dist/lib"
