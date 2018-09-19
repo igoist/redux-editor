@@ -26,8 +26,29 @@ class Tmp extends React.Component {
 
   render() {
     console.log(this.props);
+    const { t1, t2 } = this.props;
     return (
       <div>
+        {
+          t1 !== '' ? (
+            <div className="hb-card-0">
+              <h3>Test Part01</h3>
+              <div className="content">
+                { t1 }
+              </div>
+            </div>
+          ) : null
+        }
+        {
+          t2 && (
+            <div className="hb-card-0">
+              <h3>Test Part02</h3>
+              <div className="content">
+                { t2 }
+              </div>
+            </div>
+          )
+        }
         <div className="hb-card-0">
           <h3>公告</h3>
           <div className="content">

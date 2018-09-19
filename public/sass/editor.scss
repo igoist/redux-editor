@@ -28,16 +28,15 @@ h1 {
   }
 }
 
-#e01 {
-  border: 1px solid #d333;
-  height: 100px;
-}
 
 .ex-editor {
   outline: none;
   width: 300px;
   line-height: 32px;
   font-size: 16px;
+
+  border: 1px solid #d333;
+  height: 100px;
 
   &:focus {
     outline: none;

@@ -37,21 +37,24 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer);
 
 const Left = ({ dispatch }) => {
-  let input;
-
-  let handleClick = () => {
-    // console.log(input.innerHTML);<p style='color: #f00;'>dasd</p>
-    dispatch({ type: EDIT_CONTENT, id: 0, text: input.innerHTML });
-  };
+  let input01;
+  let input02;
 
   return (
     <div className='left'>
       <div className='e-card'>
-        <h1>Test Part</h1>
-        <div id='e01' className='ex-editor' contentEditable='true' ref={ node => input = node }>
+        <h1>Test Part01</h1>
+        <div id='e01' className='ex-editor' contentEditable='true' ref={ node => input01 = node }>
 
         </div>
-        <button onClick={ () => handleClick() }>Handle</button>
+        <button onClick={ () => dispatch({ type: EDIT_CONTENT, id: 0, text: input01.innerHTML }) }>Handle</button>
+      </div>
+      <div className='e-card'>
+        <h1>Test Part02</h1>
+        <div id='e02' className='ex-editor' contentEditable='true' ref={ node => input02 = node }>
+
+        </div>
+        <button onClick={ () => dispatch({ type: EDIT_CONTENT, id: 1, text: input02.innerHTML }) }>Handle</button>
       </div>
     </div>
   );
@@ -62,7 +65,8 @@ const NewLeft = connect()(Left);
 
 
 const mapRightStateToProps = state => ({
-  t1: state.edit[0]
+  t1: state.edit[0],
+  t2: state.edit[1]
 });
 // const mapRightStateToProps = state => {
 //   console.log(state);
