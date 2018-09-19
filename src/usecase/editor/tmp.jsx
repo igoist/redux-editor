@@ -25,6 +25,7 @@ class Tmp extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <div className="hb-card-0">
@@ -43,7 +44,7 @@ class Tmp extends React.Component {
         <div className="hb-card-0">
           <h3>课程介绍</h3>
           <div className="content">
-            <p><img src="//http://hbimg-dev.b0.upaiyun.com/be2a9e03007090a9e1509ad6d8eac6ec29a72856_/fw/1200/watermark/url/MGY2MzQ2ZmVkZGM2ODZjYzQ1ZjU5NzgyOTQyZDQyYjJiMzcwNGEzOQ!fw1200" /></p>
+            <p><img src="http://hbimg-dev.b0.upaiyun.com/be2a9e03007090a9e1509ad6d8eac6ec29a72856" /></p>
             <p>如今，随便打开一个群都能看到动态表情的身影，站酷的笑z、通达大叔的星座表情包、白茶的吾皇和巴扎嘿......</p>
             <p>那么，一点都一点都不会的萌新该如何完成自己的动态表情包呢？</p>
             <p>如今，随便打开一个群都能看到动态表情的身影，站酷的笑z、通达大叔的星座表情包、白茶的吾皇和巴扎随便打开一个群都能看到动态表情的身影。</p>
