@@ -36,26 +36,29 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 
+const EPart = ({ id, handleSubmit }) => {
+  let input;
+
+  return (
+    <div className='e-card'>
+      <h1>Test Part{ '0' + id}</h1>
+      <div id={ 'e0' + id } className='ex-editor' contentEditable='true' ref={ node => input = node }>
+
+      </div>
+      <button onClick={ () => handleSubmit({ id, text: input.innerText }) }>Handle</button>
+    </div>
+  );
+};
+
 const Left = ({ dispatch }) => {
-  let input01;
-  let input02;
+  const handleSubmit = ({ id, text }) => {
+    dispatch({ type: EDIT_CONTENT, id, text });
+  };
 
   return (
     <div className='left'>
-      <div className='e-card'>
-        <h1>Test Part01</h1>
-        <div id='e01' className='ex-editor' contentEditable='true' ref={ node => input01 = node }>
-
-        </div>
-        <button onClick={ () => dispatch({ type: EDIT_CONTENT, id: 0, text: input01.innerHTML }) }>Handle</button>
-      </div>
-      <div className='e-card'>
-        <h1>Test Part02</h1>
-        <div id='e02' className='ex-editor' contentEditable='true' ref={ node => input02 = node }>
-
-        </div>
-        <button onClick={ () => dispatch({ type: EDIT_CONTENT, id: 1, text: input02.innerHTML }) }>Handle</button>
-      </div>
+      <EPart handleSubmit={ handleSubmit } id={ 0 } />
+      <EPart handleSubmit={ handleSubmit } id={ 1 } />
     </div>
   );
 };
