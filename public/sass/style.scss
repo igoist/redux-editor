@@ -1,4 +1,7 @@
-$bg-color: #fff;
+$bg-color: #86c7c7;
+
+$themeBg: #272822;
+$themeColor: #86c7c7;
 
 * {
   margin: 0;
@@ -30,6 +33,7 @@ body {
 
 @import 'layout/_navigator';
 @import 'editor';
+@import 'components/_burger';
 
 img {
   width: 160px;

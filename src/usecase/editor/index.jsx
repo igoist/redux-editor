@@ -42,10 +42,10 @@ const EPart = ({ id, handleSubmit }) => {
   return (
     <div className='e-card'>
       <h1>Test Part{ '0' + id}</h1>
-      <div id={ 'e0' + id } className='ex-editor' contentEditable='true' ref={ node => input = node }>
+      <textarea id={ 'e0' + id } className='ex-editor' ref={ node => input = node }>
 
-      </div>
-      <button onClick={ () => handleSubmit({ id, text: input.innerText }) }>Handle</button>
+      </textarea>
+      <button onClick={ () => handleSubmit({ id, text: input.value }) }>Handle</button>
     </div>
   );
 };
