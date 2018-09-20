@@ -13,7 +13,7 @@ const handleMenuBtnClick = () => {
 
 const handlePanelBtnClick = () => {
   document.querySelector('.panelBtn').classList.toggle('active');
-  document.querySelector('.panel').classList.toggle('right-hidden');
+  document.querySelector('.panel').classList.toggle('left-hidden');
 };
 
 ReactDOM.render(

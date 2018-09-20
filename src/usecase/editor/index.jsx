@@ -50,20 +50,20 @@ const EPart = ({ id, handleSubmit }) => {
   );
 };
 
-const Left = ({ dispatch }) => {
+const Right = ({ dispatch }) => {
   const handleSubmit = ({ id, text }) => {
     dispatch({ type: EDIT_CONTENT, id, text });
   };
 
   return (
-    <div className='left'>
+    <div className='right'>
       <EPart handleSubmit={ handleSubmit } id={ 0 } />
       <EPart handleSubmit={ handleSubmit } id={ 1 } />
     </div>
   );
 };
 
-const NewLeft = connect()(Left);
+const NewRight = connect()(Right);
 
 
 
@@ -84,9 +84,9 @@ const NewTmp = connect(
 
 const Editor = () => (
   <div className='panel clearfix'>
-    <NewLeft />
+    <NewRight />
 
-    <div className='right'>
+    <div className='left'>
       <NewTmp />
     </div>
   </div>

@@ -41,10 +41,10 @@ class Tmp extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { t1, t2 } = this.props;
     return (
-      <div>
+      <div className='result-wrap'>
         <T t={ t1 } title={ 'Test Part00' } />
         <T t={ t2 } title={ 'Test Part01' } />
 
